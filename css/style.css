@@ -42,7 +42,11 @@ main {
     z-index: 1;
     position: absolute;
     left: -20%;
-    top: -5%;
+    top: 10%;
+    cursor: pointer;
+}
+.robo:active {
+    transform: scale(1.3)
 }
 
 .titulo {
@@ -209,6 +213,140 @@ main {
     margin: 10px 0 0;
 }
 
+/* adição dos botões*/
+.alterar {
+    margin: 2px;
+}
+
+.botoes {
+    position: relative;
+    display: flex;
+}
+
+/*estilos botões*/
+.custom-btn {
+    width: 100px;
+    height: 45px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+.btn1 {
+    border: none;
+    background: rgb(6, 14, 131);
+    background: linear-gradient(0deg, #274360 0%, #72BCD4 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn2 {
+    border: none;
+    background: rgb(255, 151, 0);
+    background: linear-gradient(0deg, #eaf818 0%, rgb(255, 151, 0) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn3 {
+    border: none;
+    background: #FFFFFF;
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%);
+    color: #000;
+    overflow: hidden;
+}
+.btn4 {
+    border: none;
+    background: #000;
+    background: linear-gradient(0deg, #000 0%, #474A51 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn5 {
+    border: none;
+    background: rgb(251, 33, 117);
+    background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+    color: #fff;
+    overflow: hidden;
+}
+.btn6 {
+    border: none;
+    background: red;
+    background: linear-gradient(0deg, #B80F0A 0%, #CA3433 100%);
+    color: #fff;
+    overflow: hidden;
+}
+
+.btn1:before,
+.btn2:before,
+.btn3:before,
+.btn4:before,
+.btn5:before,
+.btn6:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover,
+.btn5:hover,
+.btn6:hover{
+    opacity: .7;
+}
+
+.btn1:active,
+.btn2:active,
+.btn3:active,
+.btn4:active,
+.btn5:active,
+.btn6:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
 @media screen and (max-width: 1600px) {
     body { 
         font-size: 14px;
@@ -229,5 +367,40 @@ main {
         width: 96vw;
         height: 80vh;
         margin: 10vh auto;
+    }
+}
+@media screen and (max-width: 390px) {
+   
+
+    main {
+        width: 96vw;
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .robo {
+        width: 70%;
+        height: 400px;
+        position: initial;        
+    }
+    .robo:active{
+        transform: scale(1.3)
+    }
+    .alterar {
+        margin: 10px;
+        width: 100px;
+        background-color: darkgray;
+        border-radius: 8px;
+        box-shadow: 2px 2px;
+    }
+    
+    .botoes {
+        display: flex;
+        height: 400px;
+        flex-direction: column;
+        position: initial;
+    }
+    .box-robo{
+        display: flex;
     }
 }
