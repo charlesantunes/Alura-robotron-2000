@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
     <title>Robotron 2000</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <main>
-        <section class="robotron">
+        <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+        <section class="robotron box-robo">
+            <section class="robotron">
+                <section class="botoes">
+                    <button class="alterar btn1 custom-btn" alterar onclick="trocaImagem('Azul')">Robotron Azul</button>
+                    <button class="alterar btn2 custom-btn" alterar onclick="trocaImagem('Amarelo')">Robotron Amarelo</button>
+                    <button class="alterar btn3 custom-btn" alterar onclick="trocaImagem('Branco')">Robotron Branco</button>
+                    <button class="alterar btn4 custom-btn" alterar onclick="trocaImagem('Preto')">Robotron Preto</button>
+                    <button class="alterar btn5 custom-btn" alterar onclick="trocaImagem('Rosa')">Robotron Rosa</button>
+                    <button class="alterar btn6 custom-btn" alterar onclick="trocaImagem('Vermelho')">Robotron Vermelho</button>
+                </section>
+            </section>
             <img class="robo" src="img/robotron.png" alt="Robotron" id="imgRobo">
-            <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+
         </section>
 
         <section class="box estatisticas">
@@ -100,4 +113,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -71,3 +71,8 @@ function atualizaEstatistica(peca) {
         e.textContent = parseInt(e.textContent) + pecas[peca][e.dataset.estatistica]
     })
 }
+
+function trocaImagem(cor){
+   const trocarCor = document.querySelector(".robo");
+   trocarCor.src="/img/Robotron 2000 - " + cor + "/robotron.png";
+}
